@@ -1,0 +1,46 @@
+/*==================================================================
+[ Menu ]*/
+
+.wrap-menu-desktop {
+  position: fixed;
+  z-index: 1100;
+  background-color: transparent;
+  width: 100%;
+  height: 84px;
+  top: 40px;
+  left: 0px; 
+
+  -webkit-transition: height 0.3s, background-color 0.3s;
+  -o-transition: height 0.3s, background-color 0.3s;
+  -moz-transition: height 0.3s, background-color 0.3s;
+  transition: height 0.3s, background-color 0.3s;
+}
+
+.header-v2 .wrap-menu-desktop {
+  background-color: #fff;
+  top: 0;
+}
+
+.header-v3 .wrap-menu-desktop {
+  background-color: transparent;
+  top: 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.header-v4 .wrap-menu-desktop {
+  background-color: #fff;
+}
+
+
+/*---------------------------------------------*/
+.limiter-menu-desktop {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+}
+
