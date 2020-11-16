@@ -1,131 +1,177 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+<style>
+.filterDiv {
+  float: left;
+  background-color: #2196F3;
+  color: #ffffff;
+  width: 100px;
+  line-height: 100px;
+  text-align: center;
+  margin: 2px;
+  display: none;
+}
 
-  <head>
-   
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-132568832-2"></script>
-              <script>
-                 window.dataLayer = window.dataLayer || [];
-                 function gtag(){dataLayer.push(arguments);}
-                 gtag('js', new Date());
+.show {
+  display: block;
+}
 
-                  gtag('config', 'UA-132568832-2');
-               </script>
-    
-    
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+.container {
+  margin-top: 20px;
+  overflow: hidden;
+}
 
-    <title>Akshay Devkate</title>
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
 
-    <!-- Bootstrap core CSS -->
-    <link href="bootstrap.min.css" rel="stylesheet">
+.btn:hover {
+  background-color: #ddd;
+}
 
-    <!-- Custom fonts for this template -->
-    <link href="all.min.css" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+</style>
+<body>
 
-    <!-- Custom styles for this template -->
-    <link href="clean-blog.min.css" rel="stylesheet">
+<h2>Academic / Trail / Enterprise / Opensource </h2>
 
-  </head>
+<div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')"> Show all </button>
+  <button class="btn" onclick="filterSelection('Academic')"> Academic </button>
+  <button class="btn" onclick="filterSelection('Trail')"> Trial </button>
+  <button class="btn" onclick="filterSelection('Enterprise')"> Enterprise </button>
+  <button class="btn" onclick="filterSelection('Opensource')"> Opensource </button>
+</div>
 
-  <body>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">Akshay Devkate</a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          Menu
-          <i class="fas fa-bars"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="projects.html">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="blogs.html">Blogs</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+<h2>Filter 2</h2>
 
-    <!-- Page Header -->
-    <header class="masthead" style="background-image: url('akshay2.jpg')">
-      <div class="overlay"></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-md-10 mx-auto">
-            <div class="site-heading">
-              <h1>Akshay Devkate</h1>
-              <span class="subheading">Nothing is relative everything is absolute!</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
+<div id="newButtonContainer"> 
+<button class="btna active" onclick="filterSelection('all')"> New all</button>
+<button class="btna" onclick="filterSelection('processmining')"> Prcess mining</button>
+<button class="btna" onclick="filterSelection('Discovery')"> Process Discovery</button>
+<button class="btna" onclick="filterSelection('Import')"> Import type </button>
+<button class="btna" onclick="filterSelection('Export')"> Export type</button>
+</div>
 
-    
+<div class="container">
+  <div class="filterDiv Academic">
+   <div class="filterDiva processmining">
+  BMW    
+  
+  
+</div>
+  <div class="filterDiv colors Trial">
+  Orange</div>
+  <div class="filterDiv Enterprise">Volvo</div>s
+  <div class="filterDiv Opensource">Red</div>
+  <div class="filterDiv cars Academic">Mustang</div>
+  <div class="filterDiv Trial">Blue</div>
+  <div class="filterDiv Opensource">Cat</div>
+  <div class="filterDiv Academic">Dog</div>
+  <div class="filterDiv Academic">Melon</div>
+  <div class="filterDiv fruits Opensource">Kiwi</div>
+  <div class="filterDiv Trial">Banana</div>
+  <div class="filterDiv Enterprise">Lemon</div>
+  <div class="filterDiv Opensource">Cow</div>
+</div>
 
-    <hr>
 
-    <!-- Footer -->
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-md-10 mx-auto">
-            <ul class="list-inline text-center">
-              <li class="list-inline-item">
-                <a href="#">
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="https://www.facebook.com/AkshayDattatrayaDevkate">
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="https://github.com/AkshayDevkate">
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-            </ul>
-            <p class="copyright text-muted">Copyright &copy; Akshay Devkate 2018</p>
-          </div>
-        </div>
-      </div>
-    </footer>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="jquery.min.js"></script>
-    <script src="bootstrap.bundle.min.js"></script>
 
-    <!-- Custom scripts for this template -->
-    <script src="clean-blog.min.js"></script>
+<script>
+filterSelection("all")
+function filterSelection(c) {
+}
 
-  </body>
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
 
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+
+
+function filterSelectiona(c) {
+  var x, i;
+  x = document.getElementsByClassName("filterDiva");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var btnContainera = document.getElementById("newButtonContainer");
+var btns = btnContainer.getElementsByClassName("btna");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+
+
+}
+}
+
+
+
+</script>
+
+</body>
 </html>

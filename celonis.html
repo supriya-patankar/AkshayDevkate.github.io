@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+
+
+
+/* Style all font awesome icons */
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <a href="newIndex.html">About Process Mining</a>
+    <a href="#">Recommender Engine</a>
+    <a href="search.html">Tools Catelog</a>
+    <a href="#">Contact</a>
+    <a href="#">News</a>
+  </div>
+</div>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; data flirts</span>
+
+<script>
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+</script>
+
+<h2 align="center">CELONIS</h2>
+<p>Process mining is an analytical discipline for discovering, monitoring, and improving processes as they actually are (not as you think they might be), by extracting knowledge from event logs readily available in today’s information systems.
+
+Process mining offers objective, fact-based insights, derived from actual data, that help you audit, analyze, and improve your existing business processes by answering both compliance-related and performance-related questions.
+
+The technology is an essential part of the Celonis Execution Management System, enabling users to measure their execution capacity by fully understanding how their processes run before taking automated action to remove any execution gaps.</p>
+
+<div class="row">
+  <div class="column" style="background-color:#aaa;">
+    <h1>Enterprise</h1>
+    <h3>Discover</h3>
+    <p> Get an as-is snapshot of your business processes by connecting any operational system. Visualize the way your processes really work and identify friction points.Get an as-is snapshot of your business processes by connecting any operational system. Visualize the way your processes really work and identify friction points.Get an as-is snapshot of your business processes by connecting any operational system. Visualize the way your processes really work and identify friction points.Get an as-is snapshot of your business processes by connecting any operational system. Visualize the way your processes really work and identify friction points.Get an as-is snapshot of your business processes by connecting any operational system. Visualize the way your processes really work and identify friction points.Get an as-is snapshot of your business processes by connecting any operational system. Visualize the way your processes really work and identify friction points.
+
+
+    </p>
+    <h3>Enhance</h3>
+    <p>Engage users with proactive friction-reducing recommendations. Use our AI-powered business rules engine to maximize business outcomes.Engage users with proactive friction-reducing recommendations. Use our AI-powered business rules engine to maximize business outcomes.Engage users with proactive friction-reducing recommendations. Use our AI-powered business rules engine to maximize business outcomes.Engage users with proactive friction-reducing recommendations. Use our AI-powered business rules engine to maximize business outcomes.Engage users with proactive friction-reducing recommendations. Use our AI-powered business rules engine to maximize business outcomes.Engage users with proactive friction-reducing recommendations. Use our AI-powered business rules engine to maximize business outcomes.</p>
+
+    <h3>Monitor</h3>
+    <p>Track process improvement over time and improve continuously with internal and external process benchmarking. Ensure processes are always “audit-ready” with conformance checking.Track process improvement over time and improve continuously with internal and external process benchmarking. Ensure processes are always “audit-ready” with conformance checking.Track process improvement over time and improve continuously with internal and external process benchmarking. Ensure processes are always “audit-ready” with conformance checking.Track process improvement over time and improve continuously with internal and external process benchmarking. Ensure processes are always “audit-ready” with conformance checking.Track process improvement over time and improve continuously with internal and external process benchmarking. Ensure processes are always “audit-ready” with conformance checking.Track process improvement over time and improve continuously with internal and external process benchmarking. Ensure processes are always “audit-ready” with conformance checking.</p>
+  </div>
+  <div class="column" style="background-color:#bbb;">
+    <h2>Free Trial</h2>
+    <p>Write some Text</p>
+  </div>
+  <div class="column" style="background-color:#ccc;">
+    <h2>Academic Some Text </h2>
+    <p>Some text..</p>
+  </div>
+</div>
+
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- Add font awesome icons -->
+<div align="center">
+<a href="#" class="fa fa-facebook"></a>
+<a href="#" class="fa fa-twitter"></a>
+ </div>     
+
+</body>
+</html>

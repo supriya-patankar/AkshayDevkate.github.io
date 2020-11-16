@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: #f1f1f1;
+}
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+</style>
+</head>
+<body>
+
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <a href="newIndex.html">About Process Mining</a>
+    <a href="#">Recommender Engine</a>
+    <a href="search.html">Tools Catelog</a>
+    <a href="#">Contact</a>
+    <a href="#">News</a>
+  </div>
+</div>
+
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; data flirts</span>
+
+<script>
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+</script>
+</style>
+</head>
+<body>
+
+<h2>Process Mining Tools</h2>
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for tool name" title="Type procees mining tool name">
+
+<table id="myTable">
+  <tr class="header">
+    <th style="width:60%;">Tool Name</th>
+    <th style="width:40%;">Licence types</th>
+  </tr>
+  <tr>
+    <td> <a href="celonis.html">Celonis</a></td>
+    <td>Enterprise | Free Trial | Academic</td>
+  </tr>
+  <tr>
+    <td><a href="cognitive.html">Cognitive</td>
+    <td>Enterprise | Academic</td>
+  </tr>
+  <tr>
+    <td>Fluxicon-Disco</td>
+    <td>Enterprise | Academic</td>
+  </tr>
+  <tr>
+    <td>Icaro TEch-Everflow</td>
+    <td>Enterprise</td>
+  </tr>
+  <tr>
+    <td>Lana Labs</td>
+    <td>Enterprise</td>
+  </tr>
+  <tr>
+    <td>Minit</td>
+    <td>Enterprise | Academic</td>
+  </tr>
+  <tr>
+    <td>Apromore PTY LTD</td>
+    <td>Enterprise | Free Trial</td>
+  </tr>
+  <tr>
+    <td>Process Analytics Factory</td>
+    <td>Enterprise | Free Trial</td>
+  </tr>
+
+  <tr>
+    <td>Business optics </td>
+    <td>Enterprise | Academic</td>
+  </tr>
+
+  <tr>
+    <td>ProcessGold UI Path </td>
+    <td>Enterprise | Academic</td>
+  </tr>
+
+  <tr>
+    <td>Puzzle Data</td>
+    <td>Enterprise</td>
+  </tr>
+
+  <tr>
+    <td>QPR Software</td>
+    <td>Enterprise</td>
+  </tr>
+
+   <tr>
+    <td>Signavio</td>
+    <td>Enterprise | Academic</td>
+  </tr>
+
+   <tr>
+    <td>Logpicker</td>
+    <td>Enterprise | Free Trial</td>
+  </tr>
+
+   <tr>
+    <td>ProM tool</td>
+    <td>Open Source</td>
+  </tr>
+
+   <tr>
+    <td>PM4PY</td>
+    <td>Open Source</td>
+  </tr>
+</table>
+
+
+
+<script>
+function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
+
+</body>
+</html>
